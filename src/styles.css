@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+}
+
+.container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.task-input:focus {
+  border-color: #667eea;
+}
+
+.add-button {
+  padding: 12px 25px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.add-button:hover {
+  background: #5568d3;
+}
+
+.add-button:active {
+  transform: scale(0.98);
+}
+
+.tasks-container {
+  min-height: 200px;
+  margin-bottom: 20px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 40px 20px;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.task-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.task-item.completed {
+  opacity: 0.6;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-text {
+  font-size: 16px;
+  color: #333;
+  word-break: break-word;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: transform 0.2s;
+}
+
+.delete-button:hover {
+  transform: scale(1.2);
+}
+
+.footer {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 15px;
+}
+
+.task-count {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
