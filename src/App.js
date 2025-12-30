@@ -7,7 +7,7 @@ function App() {
   const addTask = () => {
     if (inputValue.trim() !== '') {
       const newTask = {
-        id: Date.now(),
+        id: crypto.randomUUID(),
         text: inputValue,
         completed: false
       };
@@ -26,7 +26,7 @@ function App() {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       addTask();
     }
@@ -42,7 +42,7 @@ function App() {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyDown}
             placeholder="Escribe una nueva tarea..."
             className="task-input"
           />
